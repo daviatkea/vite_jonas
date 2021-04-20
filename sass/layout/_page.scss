@@ -1,0 +1,12 @@
+#app {
+  display: grid;
+  grid-template-columns:
+    minmax(1rem, 1fr)
+    minmax(auto, 60rem)
+    minmax(1rem, 1fr);
+  gap: 2rem 0;
+}
+
+#app > * {
+  grid-column: var(--column, 2 / -2);
+}

@@ -1,0 +1,11 @@
+@use "../abstracts/mixins";
+
+header:is(#app > *) {
+  --column: 1 / -1;
+  // display: grid;
+  // place-content: center;
+  background: rebeccapurple;
+  color: #fff;
+  min-block-size: 30vh;
+  @include mixins.center;
+}

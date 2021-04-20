@@ -1,0 +1,23 @@
+// colors
+$primary: rebeccapurple;
+$secondary: hsl(271deg 13% 37%);
+
+//themes
+$theme-1: (
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+);
+
+// Spaces
+$space: 1rem;
+$space-2x: $space * 2;
+$space-3x: $space * 3;
+
+// Breakpoints
+$breakpoints: (
+  small: 480px,
+  medium: 720px,
+  large: 960px,
+  wide: 1200px,
+);

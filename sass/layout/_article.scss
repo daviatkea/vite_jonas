@@ -1,0 +1,47 @@
+@use "sass:map";
+@use "../abstracts/vars";
+@use "../abstracts/mixins";
+
+.articles {
+  display: grid;
+  grid: auto / repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 2rem;
+}
+
+article {
+  display: grid;
+  gap: 1rem;
+  border: 1px solid rebeccapurple;
+  padding: 1rem;
+  border-radius: 8px;
+  @include mixins.breakpoint("large") {
+    padding: 2rem;
+  }
+
+  header {
+    border-block-end: 1px solid #000;
+    padding-block-end: 1rem;
+  }
+
+  &:nth-child(even) img {
+    @include mixins.profile(200px, true);
+  }
+
+  img {
+    @include mixins.profile(200px);
+
+    // &:is(article:nth-child(even) *) {
+    //   @include mixins.profile(200px, true);
+    // }
+  }
+
+  time {
+    font-size: 0.9em;
+    color: vars.$secondary;
+    background: map.get(vars.$theme-1, "warning");
+  }
+
+  h2 {
+    color: vars.$primary;
+  }
+}
